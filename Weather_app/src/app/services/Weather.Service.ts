@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { from, map, Observable } from 'rxjs';
+import { from, map } from 'rxjs';
 import { fetchWeatherApi } from 'openmeteo';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +12,6 @@ export class WeatherService {
     latitude: 56.1518,
     longitude: 10.2064,
     wind_speed_unit: 'ms',
-
     daily: [
       'weather_code',
       'temperature_2m_max',
@@ -57,8 +55,6 @@ export class WeatherService {
     timezone: 'auto',
   };
 
-  constructor(private http: HttpClient) {}
-
   getWeather() {
     return from(fetchWeatherApi(this.url, this.params)).pipe(
       map((responses) => {
@@ -68,7 +64,7 @@ export class WeatherService {
         const hourly = response.hourly()!;
         const daily = response.daily()!;
 
-        // Define Int64 variables so they can be processed accordingly
+        // Define variables so they can be processed accordingly
         const sunrise = daily.variables(7)!;
         const sunset = daily.variables(8)!;
 
