@@ -1,8 +1,8 @@
 <div class="icon-stat" role="group" aria-label="{{ label }}">
-    <div class="icon" *ngIf="icon">
-        @if (isImg(icon)) {
+    <div class="icon">
+        @if (isImg(icon!)) {
         <img [src]="icon" [alt]="label" />}
-        @else if (!isImg(icon)) {
+        @else if (!isImg(icon!)) {
         <i class="{{ icon }}"></i>
         }
     </div>

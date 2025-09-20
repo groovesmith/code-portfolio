@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './icon-stat.scss',
 })
 export class IconStat {
-  @Input() icon?: string; // either a path '/assets/...' or a CSS class for icon fonts
+  @Input() icon?: string;
   @Input() label = '';
   @Input() value: string | number | null = null;
   @Input() unit?: string;
