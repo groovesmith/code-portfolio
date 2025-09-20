@@ -13,12 +13,9 @@ export class App {
   weather: any;
   error: string | null = null;
 
-  protected readonly title = signal('Weather_app');
-
   constructor(private weatherService: WeatherService, private cdr: ChangeDetectorRef) {
     this.weatherService.getWeather().subscribe({
       next: (data) => {
-        console.log('got raw data', data);
         this.weather = data;
         this.cdr.detectChanges();
       },
@@ -26,7 +23,6 @@ export class App {
         console.error(err);
         this.error = 'Failed to load weather';
       },
-      complete: () => console.log('Complete'),
     });
   }
 }
