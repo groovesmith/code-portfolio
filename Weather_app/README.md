@@ -24,8 +24,8 @@ It uses the public **Open-Meteo API** to fetch:
 1. Clone:
 
 ```bash
-git clone https://github.com/groovesmith/angular-showcase.git
-cd angular-showcase/weather-app
+git clone https://github.com/groovesmith/code-portfolioe.git
+cd code-portfolio/weather-app
 ```
 
 2. Install node and angular CLI
