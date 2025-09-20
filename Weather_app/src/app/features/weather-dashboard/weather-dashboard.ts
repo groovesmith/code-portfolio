@@ -4,7 +4,7 @@ import { ImageModule } from 'primeng/image';
 
 import { weatherIconMap } from '../../core/weather-icon-map';
 
-import { DateTime } from '../../shared/date-time/date-time';
+import { DateTime } from './components/date-time/date-time';
 import { CurrentWeather } from './components/current-weather/current-weather';
 import { ForcastHourly } from './components/forcast-hourly/forcast-hourly';
 import { Forcast } from './components/forcast/forcast';
