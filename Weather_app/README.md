@@ -28,6 +28,8 @@ git clone https://github.com/groovesmith/angular-showcase.git
 cd angular-showcase/weather-app
 ```
 
+2. Install node and angular CLI
+
 ## Development server
 
 To start a local development server, run:
