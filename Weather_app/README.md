@@ -1,4 +1,31 @@
-# WeatherApp
+# Local Weather Dashboard (Better Developers task)
+
+This Angular app is a Local Weather Dashboard for a fixed office location:
+**Rosenkrantzgade 19B, 8000 Aarhus** (lat: `56.1518`, lon: `10.2064`).
+
+It uses the public **Open-Meteo API** to fetch:
+- Current weather (temperature, wind speed, humidity)
+- 7-day forecast (daily min/max, precipitation summary)
+
+## Demo / Features
+- Clean dashboard showing current conditions and 7-day forecast
+- PrimeNG UI components & theme
+- Client-side caching (observable + shareReplay)
+- Mocked fallback data available in `assets/mock-weather.json` so demo works offline
+- Unit tests for service mapping + component rendering
+
+## Tech
+- Angular (latest)
+- TypeScript
+- PrimeNG (UI)
+- Open-Meteo API (no API key required)
+
+## Run locally
+1. Clone:
+```bash
+git clone https://github.com/groovesmith/angular-showcase.git
+cd angular-showcase/weather-app
+```
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.2.
 
