@@ -9,10 +9,6 @@ It uses the public **Open-Meteo API** to fetch:
 
 ## Demo / Features
 - Clean dashboard showing current conditions and 7-day forecast
-- PrimeNG UI components & theme
-- Client-side caching (observable + shareReplay)
-- Mocked fallback data available in `assets/mock-weather.json` so demo works offline
-- Unit tests for service mapping + component rendering
 
 ## Tech
 - Angular (latest)
