@@ -1,0 +1,47 @@
+.forecast-7day {
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 6px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.forecast-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.forecast-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    .day {
+        flex: 1;
+        font-weight: 600;
+    }
+
+    .icon {
+        flex: 0 0 auto;
+        margin: 0 1rem;
+    }
+
+    .temps {
+        flex: 1;
+        text-align: right;
+
+        .max {
+            font-weight: 700;
+        }
+
+        .min {
+            color: #666;
+            margin-left: 0.25rem;
+        }
+    }
+}

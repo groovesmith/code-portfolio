@@ -1,0 +1,35 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+}
+
+.content {
+    display: grid;
+    gap: 24px;
+
+    grid-template-columns: 290px 1fr;
+    grid-template-areas:
+        "left-col current-weather"
+        "left-col forecast-hourly";
+    align-items: start;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.left-col {
+    grid-area: left-col;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.current-weather {
+    grid-area: current-weather;
+}
+
+.forecast-hourly {
+    grid-area: forecast-hourly;
+}

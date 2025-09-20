@@ -1,0 +1,38 @@
+<div class="forecast-hourly">
+    @if (weather?.daily) {
+    <div class="forecast-grid">
+        @for (day of weather.hourly.time!; track $index) {
+        @let i = $index;
+
+
+        <p-card class="forecast-card">
+            <div class="hour">
+                {{ day | date: 'HH:mm' }}
+            </div>
+            <div class="icon">
+                <img [src]="getWeatherIcon(weather.hourly.weather_code[i])"
+                    [alt]="'Weather code ' + weather.hourly.weather_code[i]" width="60" height="60" />
+            </div>
+            <div class="temp">
+                <span class="text">{{ weather.hourly.temperature_2m[i] | number:'1.0-0' }}°</span>
+
+            </div>
+            <div class="wind">
+                <img [src]="'/images/misc/wi_wind.svg'" width="25" height="25" />
+                <span class="text">{{ weather.hourly.wind_speed_10m[i] | number:'1.0-0' }} m/s</span>
+                <span class="text">{{ weather.hourly.wind_direction_10m[i] | number:'1.0-0' }}°</span>
+            </div>
+            <div class="precipitation">
+
+                <img [src]="'/images/misc/wi_raindrop.svg'" width="25" height="25" />
+                <span class="text">{{ weather.hourly.precipitation[i] | number:'1.0-0' }} mm</span>
+
+            </div>
+
+        </p-card>
+        }
+    </div>
+    } @else {
+    <div>No forecast available.</div>
+    }
+</div>

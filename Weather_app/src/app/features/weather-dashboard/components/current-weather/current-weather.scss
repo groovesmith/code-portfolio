@@ -1,0 +1,55 @@
+.current-weather-card {
+    background: rgba(253, 249, 249, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 6px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    .temperature-block {
+        margin-bottom: 1rem;
+
+        .temperature {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .feels-like {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+    }
+
+    .sunrise-sunset {
+        margin-top: 1rem;
+    }
+
+    .middle-panel {
+        .weather-text {
+            font-weight: 800;
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        img {
+            max-width: 180px;
+            height: auto;
+        }
+    }
+
+}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width: 768px) {
+    .current-weather-card .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .col {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+}

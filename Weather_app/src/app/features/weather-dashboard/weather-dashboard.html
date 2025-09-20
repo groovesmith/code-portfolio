@@ -1,0 +1,31 @@
+<div class="dashboard">
+    <header class="topbar">
+        <div>
+            <h1 class="title">Local Weather Dashboard</h1>
+        </div>
+        <div>
+            <div>Updated: {{ weather?.current?.time |
+                date:'short' }}</div>
+        </div>
+    </header>
+
+
+    <main class="content">
+        <div class="left-col">
+            <section class="date-time">
+                <app-date-time [curentCity]="cityName"></app-date-time>
+            </section>
+            <section class="forecast-7day">
+                <app-forcast [weather]="weather"></app-forcast>
+            </section>
+        </div>
+        <section class="current-weather ">
+            <app-current-weather [weather]="weather"></app-current-weather>
+        </section>
+
+        <section class="forecast-hourly">
+            <app-forcast-hourly [weather]="weather"></app-forcast-hourly>
+        </section>
+
+    </main>
+</div>

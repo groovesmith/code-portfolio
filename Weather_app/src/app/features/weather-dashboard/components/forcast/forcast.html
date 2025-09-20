@@ -1,0 +1,22 @@
+<div class="forecast-7day">
+    @if (weather?.daily) {
+    <ul class="forecast-list">
+        @for (day of weather.daily.time; track $index) {
+        @let i = $index;
+
+        <li class="forecast-item">
+            <span class="day">{{ day | date: 'EEE' }}</span>
+            <img class="icon" [src]="getWeatherIcon(weather.daily.weather_code[i])"
+                [alt]="'Weather code ' + weather.daily.weather_code[i]" width="45" height="45" />
+            <span class="temps">
+                <span class="max">{{ weather.daily.temperature_2m_max[i] | number:'1.0-0' }}°</span>
+                /
+                <span class="min">{{ weather.daily.temperature_2m_min[i] | number:'1.0-0' }}°</span>
+            </span>
+        </li>
+        }
+    </ul>
+    } @else {
+    <div>No forecast available.</div>
+    }
+</div>

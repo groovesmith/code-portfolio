@@ -1,0 +1,19 @@
+<div class="icon-stat" role="group" aria-label="{{ label }}">
+    <div class="icon" *ngIf="icon">
+        @if (isImg(icon)) {
+        <img [src]="icon" [alt]="label" />}
+        @else if (!isImg(icon)) {
+        <i class="{{ icon }}"></i>
+        }
+    </div>
+    <div class="text">
+        <div class="value">{{ value }}
+            @if (unit) {
+            <span class="unit">{{ unit }}</span>
+            }
+        </div>
+        <div class="label">
+            {{ label }}
+        </div>
+    </div>
+</div>

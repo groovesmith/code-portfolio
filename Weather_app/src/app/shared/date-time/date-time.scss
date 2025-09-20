@@ -1,0 +1,16 @@
+/* src/app/components/date-time/date-time.scss */
+:host {
+    display: block;
+}
+
+.time-card {
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 6px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(253, 249, 249, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+
+
+}

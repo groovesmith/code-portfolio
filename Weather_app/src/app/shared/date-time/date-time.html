@@ -1,0 +1,13 @@
+<p-card class="time-card  ">
+    <div class="col ">
+        <p style="font-size: 1.0rem; font-weight: 600;">{{curentCity}}</p>
+    </div>
+    <div class="grid justify-content-center align-items-center">
+        <div class="p-col-6 text-center" style="font-size: 1.05rem; font-weight: 600;">
+            {{ (current$ | async) | date: 'fullDate' }}
+        </div>
+        <div class="p-col-6 text-center" style="font-size: 1.2rem; font-weight: 600;">
+            {{ (current$ | async) | date: 'HH:mm' }}
+        </div>
+    </div>
+</p-card>
