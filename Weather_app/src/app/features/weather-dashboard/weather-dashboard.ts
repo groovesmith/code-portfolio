@@ -18,7 +18,7 @@ import { Forcast } from './components/forcast/forcast';
 })
 export class WeatherDashboard {
   @Input() weather: any;
-  cityName: string = 'Rosenkrantzgade 12D, Aarhus C';
+  cityName: string = 'Rosenkrantzgade 19B, Aarhus C';
 
   getWeatherIcon(weatherCode: number): string {
     return '/images/animated/' + (weatherIconMap[weatherCode] || 'day.svg');
