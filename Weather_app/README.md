@@ -1,5 +1,7 @@
 # Local Weather Dashboard (Better Developers task)
 
+![](/Weather_app/Weather-app-screenshot.png)
+
 This Angular app is a Local Weather Dashboard for a fixed office location:
 **Rosenkrantzgade 19B, 8000 Aarhus** (lat: `56.1518`, lon: `10.2064`).
 
@@ -10,11 +12,12 @@ It uses the public **Open-Meteo API** to fetch:
 
 ## Demo / Features
 
-- Clean dashboard showing current conditions and 7-day forecast
+- Clean dashboard showing time, current conditions, 7-day forecast, and 5-hourly forecast.
 
 ## Tech
 
-- Angular (latest)
+- Node v22.19.0
+- Angular v20.3.0
 - TypeScript
 - PrimeNG (UI)
 - Open-Meteo API (no API key required)
